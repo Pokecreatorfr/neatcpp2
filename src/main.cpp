@@ -51,10 +51,10 @@ int main(int argv, char** args) {
     std::cout << "Connecté au serveur!" << std::endl;
 
     // Initialisation de la population d'entités (réseaux de neurones)
-    int population_size = 500; 
+    int population_size = 100; 
     std::vector<entity> population;
 
-    std::vector<int> topology = { 6,6,12,16,32, 1}; 
+    std::vector<int> topology = {3, 1, 1}; 
 
     for (int i = 0; i < population_size; i++) {
         Network* network = new Network(topology);
@@ -67,6 +67,8 @@ int main(int argv, char** args) {
 
     int generation = 0;
 
+    int best_score = 0;
+
     while(true)
     {
         generation++;
@@ -75,6 +77,7 @@ int main(int argv, char** args) {
             int turn_without_food = 0;
             int turn_alive = 0;
             bool game_over = false;
+            int agent_score = 0;
             while(!game_over)
             {
                 float vision_data[6];
@@ -102,25 +105,37 @@ int main(int argv, char** args) {
                 int score;
                 recv(client_socket, (char*)&score, sizeof(score), 0);
 
-                if(score ==  population[i].fitness)
+                if(score > best_score)
+                {
+                    best_score = score;
+                }
+
+                
+                
+
+                if(score ==  agent_score )
                 {
                     turn_without_food++;
                 }
+                else
+                {
+                    turn_without_food = 0;
+                }
 
-                population[i].fitness = score;
+                if (score > agent_score)
+                {
+                    agent_score = score;
+                }
 
 
-                if(score == -1 || turn_without_food > 100)
+                if(score == -1 || turn_without_food > (agent_score + 1) * 10)
                 {
                     game_over = true;
                     // envoyer au server qu'il faut réinitialiser le jeu
                     bool reset = true;  
                     send(client_socket, (char*)&reset, sizeof(reset), 0);
-
-                    if(score == -1)
-                    {
-                        population[i].fitness += turn_alive * 0.05;
-                    }
+                    //population[i].fitness = population[i].fitness * turn_alive;
+                    population[i].fitness = agent_score;
                 }
                 else
                 {
@@ -131,24 +146,25 @@ int main(int argv, char** args) {
             }
         }
 
-        // Trier la population par fitness
-        std::sort(population.begin(), population.end(), [](entity a, entity b) {
+        // Trier la population par fitness décroissante
+        std::sort(population.begin(), population.end(), [](const entity& a, const entity& b) {
             return a.fitness > b.fitness;
         });
 
         std::cout << "Generation: " << generation << std::endl;
-        std::cout << "Best score: " << std::endl;
+        std::cout << "Best network: " << std::endl;
         std::cout << "ID: " << population[0].id << " Fitness: " << population[0].fitness << std::endl;
+        std::cout << "Best score ever: " << best_score << std::endl;
         population[0].network->print_info();
 
-        if(population[0].fitness == 0)
+        if (population[0].fitness == 0)
         {
-            std::cout << "Génération d'abrutis , on les tue tous !" << std::endl;
-            for (int i = 0; i < population.size(); i++) {
-                delete population.back().network;
-                population.pop_back();
+            std::cout << "Génération debile , qu'ils meurent tous" << std::endl;
+            for(int i = 0; i < population.size(); i++)
+            {
+                delete population[i].network;
             }
-
+            population.clear();
             for (int i = 0; i < population_size; i++) {
                 Network* network = new Network(topology);
                 entity e = {network, 0.0f, i};
@@ -157,6 +173,7 @@ int main(int argv, char** args) {
         }
         else
         {
+
             float death_rate = 0.75;
 
             for(int i = 0; i < population.size() * death_rate; i++)
@@ -171,8 +188,7 @@ int main(int argv, char** args) {
             {
                 Network* new_network = population[i % population_left].network->clone();
 
-                new_network->mutate(0.08, 0.08, 0.05, 0.03);
-
+                new_network->mutate(0.05, 0.05, 0.05, 0.1);
                 int id = 0;
 
                 for (int j = 0; j < population.size(); j++) {

@@ -14,7 +14,6 @@ target("Neat_CPP2")
 
 target("snake_sdl")
     set_kind("binary")
-    add_includedirs("snake_sdl/include")
     add_files("snake_sdl/src/*.cpp")
     add_packages("libsdl")
     add_links("ws2_32")

@@ -97,6 +97,17 @@ matrix tanh(matrix *a)
     return result;
 }
 
+matrix tanh(matrix a)
+{
+    matrix result(a.get_rows(), a.get_cols());
+    for (int i = 0; i < a.get_rows(); i++) {
+        for (int j = 0; j < a.get_cols(); j++) {
+            result.data[i][j] = tanh(a.data[i][j]);
+        }
+    }
+    return result;
+}
+
 matrix tanh_prime(matrix *a)
 {
     matrix result(a->get_rows(), a->get_cols());

@@ -38,7 +38,7 @@ bool is_snake_dead(const std::vector<position>& snake) {
 
 void initialize_game(std::vector<position>& snake, position& food) {
     snake = { {grid_size / 2, grid_size /2}, {grid_size / 2, grid_size/2 +1} };
-    food = { rand() % grid_size, rand() % grid_size };
+    food = { 4,3};
 
     while (is_in_snake(snake, food)) {
         food = { rand() % grid_size, rand() % grid_size };
@@ -177,12 +177,28 @@ int main(int argc, char* args[]) {
     initialize_game(snake, food);
     direction dir = UP;  // Commence par aller vers le haut
 
+    u_int time_divider = 1;
+
     while (running) {
 
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
+            }
+            // Gestion des touches
+            if (event.type == SDL_KEYDOWN) {
+                switch (event.key.keysym.sym) {
+                case SDLK_UP:
+                    time_divider++;
+                    break;
+                case SDLK_DOWN:
+                    if (time_divider > 1)
+                    {
+                        time_divider--;
+                    }
+                    break;
+                }
             }
         }
 
@@ -274,7 +290,7 @@ int main(int argc, char* args[]) {
         SDL_RenderFillRect(renderer, &food_rect);
 
         SDL_RenderPresent(renderer);
-        SDL_Delay(2);
+        SDL_Delay(2 * time_divider);
     }
 
     closesocket(client_socket);

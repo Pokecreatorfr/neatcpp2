@@ -21,6 +21,8 @@ matrix leaky_relu_prime(matrix* a);
 
 matrix tanh(matrix* a);
 
+matrix tanh(matrix a);
+
 matrix tanh_prime(matrix* a);
 
 matrix softmax(matrix* a);
