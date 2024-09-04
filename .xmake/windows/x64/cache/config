@@ -1,0 +1,12 @@
+{
+    options = {
+        arch = "x86_64",
+        plat = "mingw",
+        mode = "debug",
+        toolchain = "mingw"
+    },
+    recheck = false,
+    mtimes = {
+        ["xmake.lua"] = 1725392979
+    }
+}

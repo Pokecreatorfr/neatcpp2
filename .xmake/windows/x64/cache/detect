@@ -1,0 +1,156 @@
+{
+    ["detect.tools.gcc.has_cflags"] = {
+        ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++_14.1.0"] = {
+            ["-c"] = true,
+            ["--help"] = true,
+            ["-print-multiarch"] = true,
+            ["-print-multi-os-directory"] = true,
+            ["-pie"] = true,
+            ["-print-sysroot"] = true,
+            ["-time"] = true,
+            ["-v"] = true,
+            ["-no-canonical-prefixes"] = true,
+            ["-print-multi-directory"] = true,
+            ["-pass-exit-codes"] = true,
+            ["--version"] = true,
+            ["--param"] = true,
+            ["-print-search-dirs"] = true,
+            ["-save-temps"] = true,
+            ["-Xlinker"] = true,
+            ["-dumpmachine"] = true,
+            ["-print-multi-lib"] = true,
+            ["-E"] = true,
+            ["-Xpreprocessor"] = true,
+            ["-B"] = true,
+            ["-x"] = true,
+            ["--target-help"] = true,
+            ["-dumpspecs"] = true,
+            ["-Xassembler"] = true,
+            ["-print-libgcc-file-name"] = true,
+            ["-dumpversion"] = true,
+            ["-S"] = true,
+            ["-print-sysroot-headers-suffix"] = true,
+            ["-shared"] = true,
+            ["-o"] = true,
+            ["-pipe"] = true
+        }
+    },
+    find_program_mingw_arch_x86_64_plat_mingw_checktoolld = {
+        ["x86_64-w64-mingw32-g++"] = [[C:\MinGW\bin\x86_64-w64-mingw32-g++]]
+    },
+    find_program = {
+        ["7z"] = [[C:\Program Files\xmake\winenv\bin\7z]],
+        git = "git",
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\cl.exe]],
+        unzip = false,
+        ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++"] = [[C:\MinGW\bin\x86_64-w64-mingw32-g++]],
+        gzip = false,
+        ping = "ping"
+    },
+    find_programver_fetch_package_system = {
+        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.29.5-msvc4"
+    },
+    ["detect.sdks.find_mingw"] = {
+        mingw = {
+            sdkdir = [[C:\MinGW]],
+            cross = "x86_64-w64-mingw32-",
+            bindir = [[C:\MinGW\bin]]
+        }
+    },
+    ["lib.detect.has_flags"] = {
+        ["mingw_x86_64_C:\\MinGW\\bin\\x86_64-w64-mingw32-g++_14.1.0_cxx_cxflags_-m64_-MMD -MF"] = true,
+        ["mingw_x86_64_C:\\MinGW\\bin\\x86_64-w64-mingw32-g++_14.1.0_cxx__-m64_-O3"] = true,
+        ["mingw_x86_64_C:\\MinGW\\bin\\x86_64-w64-mingw32-g++_14.1.0_cxx_cxflags_-m64_-fdiagnostics-color=always"] = true,
+        ["mingw_x86_64_C:\\MinGW\\bin\\x86_64-w64-mingw32-g++_14.1.0_cxx_cxflags_-m64_-fvisibility-inlines-hidden"] = true
+    },
+    find_programver = {
+        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\cl.exe"] = "19.41.34120",
+        ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++"] = "14.1.0"
+    },
+    find_program_mingw_arch_x86_64_plat_mingw_checktoolcxx = {
+        ["x86_64-w64-mingw32-g++"] = [[C:\MinGW\bin\x86_64-w64-mingw32-g++]]
+    },
+    find_program_fetch_package_xmake = {
+        cmake = false
+    },
+    find_program_fetch_package_system = {
+        cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]]
+    },
+    find_package_mingw_x86_64_fetch_package_xmake = {
+        ["xmake::libsdl_a0b5b76acc3449dab95ee806391380c5_release_2.30.6_external"] = {
+            libfiles = {
+                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib\libSDL2main.a]],
+                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib\libSDL2.a]]
+            },
+            license = "zlib",
+            sysincludedirs = {
+                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include]],
+                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include\SDL2]]
+            },
+            linkdirs = {
+                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib]]
+            },
+            syslinks = {
+                "mingw32",
+                "user32",
+                "gdi32",
+                "winmm",
+                "imm32",
+                "ole32",
+                "oleaut32",
+                "version",
+                "uuid",
+                "advapi32",
+                "setupapi",
+                "shell32"
+            },
+            linkorders = {
+                [1] = "mingw32",
+                [2] = "SDL2main",
+                __wrap_locked__ = true
+            },
+            links = {
+                "SDL2main",
+                "SDL2"
+            },
+            version = "2.30.6",
+            static = true,
+            components = {
+                __base = {
+                    sysincludedirs = {
+                        [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include]],
+                        [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include\SDL2]]
+                    },
+                    linkdirs = {
+                        [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib]]
+                    },
+                    linkorders = {
+                        [1] = "mingw32",
+                        [2] = "SDL2main",
+                        __wrap_locked__ = true
+                    }
+                },
+                main = {
+                    syslinks = "mingw32",
+                    links = "SDL2main"
+                },
+                lib = {
+                    syslinks = {
+                        "user32",
+                        "gdi32",
+                        "winmm",
+                        "imm32",
+                        "ole32",
+                        "oleaut32",
+                        "version",
+                        "uuid",
+                        "advapi32",
+                        "setupapi",
+                        "shell32"
+                    },
+                    links = "SDL2"
+                }
+            }
+        }
+    }
+}
