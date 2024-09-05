@@ -1,26 +1,26 @@
 [
 {
-  "directory": "c:\\Users\\mathe\\Documents\\GitHub\\neatcpp2",
-  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\activation.cpp.obj", "src\\activation.cpp"],
+  "directory": "c:\\Users\\MatheoVIGNAUD\\Documents\\neatcpp2",
+  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\activation.cpp.obj", "src\\activation.cpp"],
   "file": "src\\activation.cpp"
 },
 {
-  "directory": "c:\\Users\\mathe\\Documents\\GitHub\\neatcpp2",
-  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
+  "directory": "c:\\Users\\MatheoVIGNAUD\\Documents\\neatcpp2",
+  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
   "file": "src\\main.cpp"
 },
 {
-  "directory": "c:\\Users\\mathe\\Documents\\GitHub\\neatcpp2",
-  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\matrix.cpp.obj", "src\\matrix.cpp"],
+  "directory": "c:\\Users\\MatheoVIGNAUD\\Documents\\neatcpp2",
+  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\matrix.cpp.obj", "src\\matrix.cpp"],
   "file": "src\\matrix.cpp"
 },
 {
-  "directory": "c:\\Users\\mathe\\Documents\\GitHub\\neatcpp2",
-  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\network.cpp.obj", "src\\network.cpp"],
+  "directory": "c:\\Users\\MatheoVIGNAUD\\Documents\\neatcpp2",
+  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Iinclude", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include\\SDL2", "-o", "build\\.objs\\Neat_CPP2\\mingw\\x86_64\\debug\\src\\network.cpp.obj", "src\\network.cpp"],
   "file": "src\\network.cpp"
 },
 {
-  "directory": "c:\\Users\\mathe\\Documents\\GitHub\\neatcpp2",
-  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-Isnake_sdl\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include", "-isystem", "C:\\Users\\mathe\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.6\\a0b5b76acc3449dab95ee806391380c5\\include\\SDL2", "-o", "build\\.objs\\snake_sdl\\mingw\\x86_64\\debug\\snake_sdl\\src\\main.cpp.obj", "snake_sdl\\src\\main.cpp"],
+  "directory": "c:\\Users\\MatheoVIGNAUD\\Documents\\neatcpp2",
+  "arguments": ["C:\\MinGW\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-m64", "-g", "-O3", "-std=c++17", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include", "-isystem", "C:\\Users\\MatheoVIGNAUD\\AppData\\Local\\.xmake\\packages\\l\\libsdl\\2.30.3\\718e3415fffe4fb1b9aecca9fa4ec857\\include\\SDL2", "-o", "build\\.objs\\snake_sdl\\mingw\\x86_64\\debug\\snake_sdl\\src\\main.cpp.obj", "snake_sdl\\src\\main.cpp"],
   "file": "snake_sdl\\src\\main.cpp"
 }]

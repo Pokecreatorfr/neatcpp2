@@ -1,55 +1,48 @@
 {
     libsdl = {
-        version = "2.30.6",
-        linkdirs = [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib]],
+        static = true,
+        __requirestr = "libsdl",
         links = {
             "SDL2main",
             "SDL2"
         },
-        installdir = [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5]],
-        __components_deps = {
-            main = "lib"
+        version = "2.30.3",
+        libfiles = {
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\lib\libSDL2main.a]],
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\lib\libSDL2.a]]
         },
-        sysincludedirs = {
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include]],
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include\SDL2]]
-        },
-        static = true,
-        license = "zlib",
         __components_orderlist = {
             "main",
             "lib"
         },
-        linkorders = {
-            [1] = "mingw32",
-            [2] = "SDL2main",
-            __wrap_locked__ = true
+        sysincludedirs = {
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include]],
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include\SDL2]]
         },
         envs = {
             PATH = {
-                [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\bin]],
-                [[C:\Users\mathe\AppData\Local\.xmake\packages\c\cmake\3.30.2\2b80cef30074424181b5e19a46ef30fc\bin]]
+                [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\bin]],
+                [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\c\cmake\3.29.2\ae2ca291915949809139117c15e1db8a\bin]]
             }
         },
-        __requirestr = "libsdl",
         components = {
-            main = {
-                syslinks = "mingw32",
-                links = "SDL2main"
-            },
             __base = {
-                sysincludedirs = {
-                    [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include]],
-                    [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include\SDL2]]
-                },
                 linkdirs = {
-                    [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib]]
+                    [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\lib]]
                 },
                 linkorders = {
                     [1] = "mingw32",
                     [2] = "SDL2main",
                     __wrap_locked__ = true
+                },
+                sysincludedirs = {
+                    [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include]],
+                    [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include\SDL2]]
                 }
+            },
+            main = {
+                syslinks = "mingw32",
+                links = "SDL2main"
             },
             lib = {
                 syslinks = {
@@ -68,10 +61,15 @@
                 links = "SDL2"
             }
         },
-        libfiles = {
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib\libSDL2main.a]],
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\lib\libSDL2.a]]
+        __enabled = true,
+        license = "zlib",
+        linkorders = {
+            [1] = "mingw32",
+            [2] = "SDL2main",
+            __wrap_locked__ = true
         },
+        installdir = [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857]],
+        linkdirs = [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\lib]],
         syslinks = {
             "mingw32",
             "user32",
@@ -86,6 +84,8 @@
             "setupapi",
             "shell32"
         },
-        __enabled = true
+        __components_deps = {
+            main = "lib"
+        }
     }
 }

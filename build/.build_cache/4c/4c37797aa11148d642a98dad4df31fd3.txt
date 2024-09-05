@@ -1,7 +1,0 @@
-{
-    errdata = "\27[01m\27[Ksrc\\main.cpp:\27[m\27[K In function '\27[01m\27[Kint\27[01;32m\27[K main\27[m\27[K(int, char**)\27[m\27[K':\
-\27[01m\27[Ksrc\\main.cpp:146:59:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Knarrowing conversion of '\27[01m\27[Kpopulation.std::vector<entity>::size()\27[m\27[K' from '\27[01m\27[Kstd::vector<entity>::size_type\27[m\27[K' {aka '\27[01m\27[Klong long unsigned int\27[m\27[K'} to '\27[01m\27[Kint\27[m\27[K' [\27[01;35m\27[K-Wnarrowing\27[m\27[K]\
-  146 |             entity e = {new_network, 0.0f, \27[01;35m\27[Kpopulation.size()\27[m\27[K};\
-      |                                            \27[01;35m\27[K~~~~~~~~~~~~~~~^~\27[m\27[K\
-"
-}

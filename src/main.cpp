@@ -77,7 +77,7 @@ int main(int argv, char** args) {
             int turn_without_food = 0;
             int turn_alive = 0;
             bool game_over = false;
-            int agent_score = 0;
+            int agent_score = -1;
             while(!game_over)
             {
                 float vision_data[6];
@@ -112,23 +112,17 @@ int main(int argv, char** args) {
 
                 
                 
-
-                if(score ==  agent_score )
+                turn_without_food++;
+                if(score != agent_score )
                 {
-                    turn_without_food++;
-                }
-                else
-                {
+                    if(score > agent_score)
+                    {
+                        agent_score = score;
+                    }
                     turn_without_food = 0;
                 }
 
-                if (score > agent_score)
-                {
-                    agent_score = score;
-                }
-
-
-                if(score == -1 || turn_without_food > (agent_score + 1) * 10)
+                if(score == -1 || turn_without_food > (agent_score + 1) * 20)
                 {
                     game_over = true;
                     // envoyer au server qu'il faut réinitialiser le jeu
@@ -136,6 +130,10 @@ int main(int argv, char** args) {
                     send(client_socket, (char*)&reset, sizeof(reset), 0);
                     //population[i].fitness = population[i].fitness * turn_alive;
                     population[i].fitness = agent_score;
+                    if(population[i].fitness > 5 )
+                    {
+                        population[i].fitness += turn_alive * 0.01;
+                    }
                 }
                 else
                 {
@@ -188,7 +186,7 @@ int main(int argv, char** args) {
             {
                 Network* new_network = population[i % population_left].network->clone();
 
-                new_network->mutate(0.05, 0.05, 0.05, 0.1);
+                new_network->mutate(0.05, 0.05, 0.05, 0.2);
                 int id = 0;
 
                 for (int j = 0; j < population.size(); j++) {

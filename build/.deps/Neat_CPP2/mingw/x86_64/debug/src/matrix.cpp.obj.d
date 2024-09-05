@@ -1,6 +1,4 @@
 {
-    depfiles_gcc = "matrix.o: src\\matrix.cpp include/matrix.hpp\
-",
     files = {
         [[src\matrix.cpp]]
     },
@@ -13,9 +11,11 @@
             "-std=c++17",
             "-Iinclude",
             "-isystem",
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include]],
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include]],
             "-isystem",
-            [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5\include\SDL2]]
+            [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857\include\SDL2]]
         }
-    }
+    },
+    depfiles_gcc = "matrix.o: src\\matrix.cpp include/matrix.hpp\
+"
 }

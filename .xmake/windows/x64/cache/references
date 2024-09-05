@@ -1,5 +1,6 @@
 {
     packages = {
-        [[C:\Users\mathe\AppData\Local\.xmake\packages\l\libsdl\2.30.6\a0b5b76acc3449dab95ee806391380c5]]
+        [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\c\cmake\3.29.2\ae2ca291915949809139117c15e1db8a]],
+        [[C:\Users\MatheoVIGNAUD\AppData\Local\.xmake\packages\l\libsdl\2.30.3\718e3415fffe4fb1b9aecca9fa4ec857]]
     }
 }

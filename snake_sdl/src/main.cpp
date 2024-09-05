@@ -6,7 +6,7 @@
 
 #pragma comment(lib, "Ws2_32.lib")
 
-int grid_size = 11;
+int grid_size = 10;
 
 struct position {
     int x;
@@ -37,8 +37,25 @@ bool is_snake_dead(const std::vector<position>& snake) {
 }
 
 void initialize_game(std::vector<position>& snake, position& food) {
+
+    //srand(666);
+
     snake = { {grid_size / 2, grid_size /2}, {grid_size / 2, grid_size/2 +1} };
-    food = { 4,3};
+
+    float random = (float)rand() / RAND_MAX;
+
+    if(random < 0.33)
+    {
+        food = { 4,3};
+    }
+    else if(random < 0.66)
+    {
+        food = { 6,3};
+    }
+    else
+    {
+        food = { 5,2};
+    }
 
     while (is_in_snake(snake, food)) {
         food = { rand() % grid_size, rand() % grid_size };
